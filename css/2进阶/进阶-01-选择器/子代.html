@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 语法： 选择器1>选择器2{css} -->
+    <style>
+        div>p{
+            color: pink;
+        }
+        div>a{
+            color: pink;
+            text-decoration:none;
+        }
+    </style>
+    <!-- 结果：在选择器1所找到 标签的子代中，找到满足选择器2的标签设置样式 -->
+</head>
+<body>
+    <div>
+        <p>
+            11111
+            <br>
+            <a href="#">33333</a>
+        </p>
+        <a href="#">22222</a>
+    </div>
+</body>
+</html>

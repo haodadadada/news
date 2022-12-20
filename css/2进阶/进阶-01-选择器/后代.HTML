@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 语法： 选择器1 选择器2{css} */
+        /* 选择器可以是标签名也可以是类名 */
+        /* 找到div的子级p设置颜色 */
+        .box p{
+            color:pink;
+        }
+    </style>
+    <!-- 结果：在选择器1中所找到标签的后代中，找到满足选择器2的标签设置样式 -->
+</head>
+<body>
+    <p>this is a p tag</p>
+    <!-- 注意 后代：包括儿子，孙子，曾孙子....  -->
+    <div class="box">
+        <p>
+            <span>first tag</span>
+            <br>
+            <span>second tag</span>
+        </p>
+    </div>
+</body>
+</html>

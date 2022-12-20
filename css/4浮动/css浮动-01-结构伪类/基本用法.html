@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 作用：根据元素在html中的结构关系查找元素 -->
+    <!-- 优势：减少对html中类的依赖，有利于保持代码整洁 -->
+    <!-- 场景：常用于查找某父级选择器中的子元素 -->
+    <!-- 选择器：E:first-child {}  说明: 匹配父元素中第一个子元素，并且是E元素 -->
+    <!--        E:last-chile {}         匹配父元素中最后一个子元素，并且是E元素  -->
+    <!--        E:nth-chile(n) {}       匹配父元素中第n个元素，并且是E元素-->
+    <!--        E：nth-last-child(n) {} 匹配父元素中倒数第n个元素，并且是E元素 -->
+    <style>
+        li:first-child {
+            color: pink;
+        }
+        li:last-child {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+</body>
+</html>

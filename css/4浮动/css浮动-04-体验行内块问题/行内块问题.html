@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 浏览器解析时行内块或行内标签时，如果标签换行书写会产生一个空格的间距 -->
+    <!-- css书写顺序：浏览器执行效率更高
+                    1、浮动/displ 2、盒子模型：margin border padding width height background-color等  3、文字样式 -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        .one {
+            background-color: pink;
+        }
+        .two {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+        <div class="one">1111</div>
+        <div class="two">2222</div>
+</body>
+</html>

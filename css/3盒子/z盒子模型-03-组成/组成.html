@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 盒子的概念：1、页面的每一个标签，都可以看做是一个“盒子”，通过盒子的视角更方便的进行布局； 2、浏览器在渲染网页时
+    会将网页中的元素看做是一个个的矩形区域，称为盒子 -->
+    <!-- 盒子模型：css中规定每个盒子分别由：内容区域（content）、内边距区域（padding）、边框区域（border）、外边框区域
+    （margin）构成，就是盒子模型 -->
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+                border:1px solid skyblue;
+                /* 边框线 */
+                padding: 20px;
+                /* 内边距：出现在内容和盒子边缘之间 */
+                margin:20px;
+                /* 外边距：出现在两个盒子之间，盒子的外面 */
+            }
+            /* 标签像素：100+1*2+20*2,100+1*2+20*2 */
+        </style>
+</head>
+<body>
+    <div>内容</div>
+    <div>内容</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 作用：选中页面同时满足多个选择器的标签 -->
+    <!-- 语法：选择器1选择器2{css}  没有空格-->
+    <!-- 结果：找到页面中既能被选择器1选中又能被选择器2选中的标签设置样式 -->
+    <!-- 注意：交集选择器如果有标签选择器，标签选择器必须写在最前面 -->
+    <style>
+        p.box{
+            font:50px 微软雅黑
+        }
+    </style>
+</head>
+<body>
+    <p class="box">ppppp</p>
+    <p>qqqqq</p>
+    <div class="box">pppppp</div>
+</body>
+</html>

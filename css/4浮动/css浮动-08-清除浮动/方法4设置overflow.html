@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 操作：直接给父元素设置overflow：hidden -->
+    <style>
+        .top {
+            margin: 0 auto;
+            width: 1000px;
+            /* height: 300px; */
+            background-color: pink;
+
+            overflow: hidden;       /* 可以清除塌陷  */
+        }
+
+        .bottom {
+            height: 200px;
+            background-color: green;
+        }
+
+        .left {
+            float: left;
+            /* margin-top: 100px; */
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="right"></div>
+        <div class="left"></div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

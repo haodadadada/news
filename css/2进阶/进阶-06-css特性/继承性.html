@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 特性：子元素默认继承父元素样式的特点 -->
+    <!-- 可以继承的常见属性（文字控制属性都可以继承）：1、color 2、font-style、font-weight、font-size、font-family
+    3、text-indent、text-align 4、line-height 5、... -->
+    <!-- 可以通过调试工具判断样式是否继承 -->
+    <!-- 不是控制文字的都不能继承 -->
+    <!-- 继承失效：1、a标签的color会继承失效 2、h系列标签的font-size会继承失效 -->
+    <style>
+        div {
+            background-color: aqua;
+            color:#aeaeae;
+            font-size: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        a div tag
+        <span>a span tag</span>
+    </div>
+</body>
+</html>

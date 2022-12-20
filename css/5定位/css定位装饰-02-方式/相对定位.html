@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  特点： 1、相对于自己之前的位置进行移动   2、需要配合方位属性实现移动  3、在页面中占位置，即没有脱离标准流 -->
+    <style>
+        .box1 {
+            display: inline-block;
+            position: relative;
+            left: 100px;
+            top: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .box2 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

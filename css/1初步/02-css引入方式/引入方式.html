@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 关系:样式表 -->
+    <link rel="stylesheet" href="./外联.css">
+    <!-- Href表示本页面要链接到的地址，在这里可以使相对路径也可以是绝对路径，最好是相对路径。
+
+Type表示的本页面链接到的页面的类型，当然这里是链接到的css样式表。
+
+Rel可能是大家最难理解的一个，rel的英文全称是relation，它的作用就是来说明本页面和链接到的页面的之间的关系。
+
+例：rel=same表示待链接的文件与此文件相同，
+
+rel=next表示待链接的文件为下一页，
+
+rel＝parent表示本文件为待链接文件的父文件，
+
+rel=previous则表示待链接的文件为上一页。
+
+rel=stylesheet指定一个固定或首选的样式，定义一个外部加载的样式表
+
+rel是在调用外部css样式时用于定义连接的css文件和HTML文档之间关系的属性。在html文档导入外部css样式时rel属性必不可少。
+
+注意：HTML中只有在使用了 href 属性的情况下才能使用 rel 属性。 -->
+</head>
+<body>
+    <!-- css有几种写法 -->
+    <!-- 内嵌式：css写在style标签中，通常在<head>标签里面 ；范围在当前页面，推荐小案例中使用-->
+    <!-- 外联式：css写在一个单独的.css文件中 （需要通过link标签在网页中引入 ； 范围在多个页面，推荐项目中使用 -->
+    <!-- 行内式：css写在标签的style属性中，只表示这一个标签的样式  ； 范围在当前标签，推荐配合js使用-->
+    <p>this is a p tag</p>
+    <div style="color:aqua;">this is a div tag</div>
+</body>
+</html>

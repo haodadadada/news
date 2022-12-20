@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 特点：1、浮动元素会脱离标准流，在标准流中不占位置； 2、浮动元素比标准流高了半个级别，可以覆盖标准流中的元素； 3、浮动找浮动，下一个浮动元素会在
+    上一个浮动元素后面左右浮动； 4、浮动元素有特殊的显示效果：一行可以显示多个，可以设置宽高； -->
+    <!-- 注意：浮动的元素不能通过text-align：center；或margin：0 auto； -->
+    <!-- 浮动的标签默认顶对齐 -->
+    <!-- 浮动后的标签具备行内块的特点 -->
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: #f08056;
+            float: left;
+            /* margin-top: 50px; */
+            /* margin-left: 50px; */
+        }
+        .two {
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+            float: left;
+        }
+        .three {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .twotwo {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            margin: 0 auto;
+        }
+        /* 浮动不具有继承性 */
+    </style>
+</head>
+<body>
+        <div class="one">1111</div>
+        <div class="two">2222
+            <div class="twotwo">2020</div>
+        </div>
+        <div class="three">3333</div>
+</body>
+</html>

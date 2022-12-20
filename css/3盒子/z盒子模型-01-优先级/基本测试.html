@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 特性：不同选择器具有不同的优先级，优先级高的选择器样式会覆盖优先级低的选择器样式 -->
+    <!-- 优先级公式：继承<通配符选择器<标签选择器<类选择器<id选择器<行内样式<！important ，选择器范围越广优先级越低-->
+    <!-- ！important写在属性值的后面，分号前面，实际开发不建议使用 -->
+    <style>
+        #box {
+            color: bisque;
+        }
+        .box {
+            color: blue;
+        }
+        div {
+            color: grey !important;
+        }
+        body {
+            color: pink;  /*不能给继承的加important*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box" style="color:green ;">测试优先级</div>
+</body>
+</html>

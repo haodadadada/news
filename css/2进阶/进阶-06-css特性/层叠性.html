@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 给一个标签设置不同样式，样式会叠加；给一个标签设置相同样式，样式会覆盖，写在最后的样式生效 -->
+    <!-- 当样式冲突时，只有当选择器优先级相同时，才能通过层叠性判断结果 -->
+    <style>
+        div {
+            color: pink;
+            color: green;
+            width: 300px;
+        }
+        .box {
+            color: aqua;
+            font-size: 30px;
+            margin: 0 auto;
+            text-align: center;  /* 两个属性加起来文字一定在屏幕中间  */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        文字
+    </div>
+</body>
+</html>
