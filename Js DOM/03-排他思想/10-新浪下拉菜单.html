@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        .nav {
+            position: relative;
+            left: 20vw;
+            top: 20vh;
+            width: 300px;
+        }
+        li {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .nav_li {
+            float: left;
+            cursor: pointer;
+        }
+        a {
+            color: black;
+        }
+        .nav_li > a {
+            display: inline-block;   /* 水平展开 */
+            width: 100px;
+            height: 50px;
+        }
+        .con {
+            display: none;
+        }
+        .unfold-first {
+            border: 0.5px solid grey;
+            border-top: 0;
+        }
+        .unfold {
+            border: 0.5px solid grey;
+        }
+        .color {
+            background-color: #d7d7d7;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav_li">
+                <a href="#">微博</a>
+            <ul class="con">
+                <li class="unfold-first">
+                    <a href="#">私信</a>
+                </li>
+                <li class="unfold">
+                    <a href="#">评论</a>
+                </li>
+                <li class="unfold">
+                    <a href="#">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav_li">
+            <a href="#">微博</a>
+            <ul class="con">
+                <li class="unfold-first">
+                    <a href="#">私信</a>
+                </li>
+                <li class="unfold">
+                    <a href="#">评论</a>
+                </li>
+                <li class="unfold">
+                    <a href="#">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav_li">
+            <a href="#">微博</a>
+            <ul class="con">
+                <li class="unfold-first">
+                    <a href="#">私信</a>
+                </li>
+                <li class="unfold">
+                    <a href="#">评论</a>
+                </li>
+                <li class="unfold">
+                    <a href="#">@我</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        let nav = document.querySelector('.nav');   // 一定要有一个最大的盒子 否则很难获取合适的元素
+        let nav_li = nav.children;     // 得到头部四个 li
+        for ( let i = 0; i < nav_li.length; i++)
+        {
+            // console.log(nav_li[i].children[1]);
+            nav_li[i].children[0].onmouseover = function()
+            {
+                this.className = 'color';
+                nav_li[i].children[1].style.display = 'block';   // nav_li 的第二个子节点 即 con
+            }
+            nav_li[i].children[0].onmouseout = function()
+            {
+                this.className = '';
+                nav_li[i].children[1].style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

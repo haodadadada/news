@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        textarea {
+            position: relative;
+            left: 30vw;
+            top: 10vh;
+            outline: none;
+        }
+        button {
+            position: absolute;
+            left: 26vw;
+            top: 10vh;
+            padding: 5px;
+        }
+        ul {
+            position: relative;
+            top: 30vh;
+            left: 30vw;
+        }
+        li {
+            list-style: none;
+            padding-left: 5px;
+            width: 200px;
+            height: 30px;
+            margin: 5px 0;
+            border: 0.1px solid black;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ul>
+    </ul>
+
+
+    <script>
+        let text = document.querySelector('textarea');
+        let btnr = document.querySelector('button');
+        let ulr = document.querySelector('ul');
+        // let lir;
+        btnr.onclick = function()   // 点击按钮后，就动态创建一个 li， 添加到 ul 里面
+        {
+            if ( text.value == '' )
+            {
+                alert('请输入内容');
+            }
+            else
+            {
+                let lir = document.createElement('li');
+                lir.innerHTML = text.value;   // 创建 li 的同时， 把文本域里面的值通过 lir.innerHTML 赋给 li元素
+                ulr.insertBefore(lir,ulr.children[0]);
+                text.value = ''; // 清空
+            }
+
+        }
+    </script>
+</body>
+</html>

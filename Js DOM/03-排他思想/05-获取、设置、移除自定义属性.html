@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo" index="1"></div>
+    <script>
+        let divr = document.querySelector('div');
+        // 1、获取元素的属性值
+        // (1) element.属性   获取内置属性值即元素本身自带的属性
+        console.log(divr.id);
+
+        // (2) element.getAttribute('属性')  get 得到  attribute 属性  主要获取 自定义 的属性
+        // 输出一个自定义属性 index
+        console.log(divr.getAttribute('id'));
+        console.log(divr.getAttribute('index'));
+
+        // 2、设置元素的属性值
+        // (1) element.属性 = '值'
+        divr.id = 'test';
+        divr.className = 'navs';
+
+        // (2) element.setAttribute('属性', '值')   主要针对于自定义属性
+        divr.setAttribute('index', 2);
+        divr.setAttribute('class', 'footer');   /* class 特殊  这里写的是 class 而不是 className */
+
+
+        // 3、移除属性  removeAttribute(属性)
+        divr.removeAttribute('index');
+    </script>
+</body>
+</html>

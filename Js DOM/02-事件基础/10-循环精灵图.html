@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 108px;
+            margin: 100px auto;
+        }
+        li {
+            float: left;
+            margin: 15px;
+            margin-bottom: 0;
+            width: 24px;
+            height: 23px;
+            background-color: pink;
+            background: url(../image/精灵图.png) no-repeat;
+            background-position: 0 0;
+            list-style: none;
+        }
+        .box1 {
+            display: inline-block;
+            width: 51px;
+            height: 33px;
+            font-size: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <div class="box1"><li></li>机票</div>
+            <div class="box1"><li></li>火车票</div>
+            <div class="box1"><li></li>高铁票</div>
+            <div class="box1"><li></li>酒店</div>
+        </ul>
+    </div>
+    <script>
+        let list = document.querySelectorAll('li');
+        for ( let i = 0; i < list.length; i++)
+        {
+            let index = 40 * i;
+            list[i].style.backgroundPosition = '-' + index + 'px ' + '0';  // 第一个 px 记得要给空格     -号 就是向左和向上
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: black;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">芭芭拉</button>
+    <button id="btn2">胡桃</button> <br>
+    <img src="../image/胡桃.jpg" alt="" title="胡桃">
+    <script>
+        // 修改元素属性 即修改 html 内的属性值
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let imgr = document.getElementsByTagName('img');   // 多个元素对象
+        console.log(imgr);
+        btn1.onclick = function ()
+        {
+            //  修改 html 标签内的属性值
+            imgr[0].src = "../image/芭芭拉.jpg";   // imgr 注意加 [] 表示单个元素对象
+            imgr[0].title = "芭芭拉";
+        }
+        btn2.onclick = function()
+        {
+            imgr[0].src = "../image/胡桃.jpg";
+            imgr[0].title = '胡桃';
+        }
+        </script>
+</body>
+</html>

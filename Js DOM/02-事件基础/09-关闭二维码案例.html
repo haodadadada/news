@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            display: block;
+            width: 400px;
+            height: 300px;
+            
+        }
+        .mys {
+            text-align: center;
+        }
+        img {
+            position: absolute;
+            left: 50px;
+            width: 300px;
+            height: 300px;
+        }
+        .btn-close {
+            position: absolute;
+            left: 40px;
+            border: 1px solid black;
+            cursor: pointer;   /* 此属性改变鼠标光标 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="mys">我的二维码</div>
+        <img src="../image/二维码.png" alt="">
+        <i class="btn-close">×</i>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn-close');
+        let box = document.querySelector('.box');
+
+        btn.onclick = function()
+        {
+            box.style.display = 'none';   /* 隐藏没有被删除 */
+        }
+    </script>
+</body>
+</html>

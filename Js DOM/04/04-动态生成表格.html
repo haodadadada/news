@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            margin: 100px auto;
+            border-collapse: collapse;   /* 合并边框 */
+        }
+        th,
+        td {
+            padding: 10px 30px;
+            background-color: #d7d7d7;
+            border: 0.5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <!-- 单元格距离为 0 -->
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        // 数组可以存放任何类型的数据
+        // 一、先准备好学生数据
+
+        let dates = [
+            {
+                name: '魏璎珞',
+                subject: 'javascript',
+                score: 100
+            },
+            {
+                name: '弘历',
+                subject: 'javascript',
+                score: 98
+            },
+            {
+                name: '明玉',
+                subject: 'javascript',
+                score: 96
+            },  
+            {
+                name: '傅恒',
+                subject: 'javascript',
+                score: 94
+            },
+            {
+                name: '小黑子',
+                subject: 'javascript',
+                score: 2.5
+            }
+        ]
+
+        // 二、(1) 往 tbody 里面创建行， 有几个人创建几个行 行内再创建单元格  双重 for 循环
+        let tbodyr = document.querySelector('tbody');
+        for (let i = 0; i < dates.length; i++)
+        {
+            let tr_ = document.createElement('tr');
+            tbodyr.appendChild(tr_);
+            // (2) 在 行 里面创建 单元格 (跟数据有关系的三个单元格)
+            // for (let k in obj)  k 得到的是属性名  obj[k] 得到的是属性值
+            for (let k in dates[i]) // 数组每一个元素都是对象  td 数量取决于对象里的属性个数   
+            {
+                let td_ = document.createElement('td');
+                td_.innerHTML = dates[i][k];   // 创建 td 元素的同时把属性值赋给 td
+                tr_.appendChild(td_);
+            }
+
+            // 三、最后一列单元格是删除， 需要单独创建单元格
+            let td__ = document.createElement('td');
+            td__.innerHTML = '<a href="JavaScript:;">删除</a>';
+            tr_.appendChild(td__);
+            
+            // 四、添加删除事件
+            let as = document.querySelectorAll('a');
+            as[i].onclick = function()
+            {
+                if (tbodyr.children.length != 0)
+                {
+                    tbodyr.removeChild(this.parentNode.parentNode);
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

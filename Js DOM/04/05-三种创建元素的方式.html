@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <div class="inner_">inner</div>
+    <div class="create_">create</div>
+    <script>
+        // 三种动态创建元素的区别
+        
+        // 1、document.write() 是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘
+        
+        // let btn = document.querySelector('button');
+        // btn.onclick = function()
+        // {
+        //     document.write('<div>123</div>');
+        // }
+
+        // 2、innerHTML 创建元素
+
+        let inner_ = document.querySelector('.inner_')
+        inner_.innerHTML += '<a href=#>百度</a>';  //  innerHTML是将内容写入某个DOM节点，不会导致页面全部重绘，  如果添加元素较多， 根据字符的不可变性，字符拼接效率很低,要采用数组的形式，结构稍复杂,空间换时间
+
+        // 3、document.createElement() 创建元素
+
+        let create_ = document.querySelector('.create_')
+        let a_ = document.createElement('a');
+        create_.appendChild(a_);   // 创建多个元素的效率稍低一点点，但是结构更清晰
+    </script>
+</body>
+</html>

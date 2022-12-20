@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>div</div>
+    <span>span</span>
+    <script>
+        let div = document.querySelector('div');
+        let span = document.querySelector('span');
+        // 1、nextSibling previousSibling  下/上一个兄弟节点 包含 元素节点 或者文本节点等 
+
+        console.log(div.nextSibling);
+        console.log(span.previousSibling);
+
+        // 2、nextElementSibling 得到下一个兄弟 元素节点
+
+        console.log(div.nextElementSibling);
+
+
+        //  封装一个兼容性函数
+        function getNextElementSibling(element)
+        {
+            let el = element;
+            while (el = el.nextSibling)
+            {
+                if (el.nodeType ===1 )
+                {
+                    return el;
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>11
+            <li>111</li>
+        </li>
+        <li>22</li>
+        <li>33</li>
+    </ul>
+
+    <script>
+        // 1、 动态创建节点元素节点
+        // document.createElement('tagname')  一般带引号的都是html里的
+        let lir = document.createElement('li');  // 创建一个 li 存在内存中
+
+        // 2、添加节点
+        // node.appendChild(child)  node 父级  child 子级    将一个节点添加到指定父节点的子节点列表末尾 类似于css 里面的 after 伪元素
+        let ulr = document.querySelector('ul');
+        ulr.appendChild(lir);    //  输出到 DOM 中, 注意不加引号
+        console.log(ulr);
+
+        // node.insertBefore(child,指定元素)   将一个节点添加到父节点的指定子节点前面 类似于css 里面的 before 伪元素
+        let lir2 = document.createElement('li');
+        ulr.insertBefore(lir2,ulr.children[1]);
+
+
+        //  页面中添加一个元素的步骤： 1、创建元素  2、添加元素
+    </script>
+</body>
+</html>

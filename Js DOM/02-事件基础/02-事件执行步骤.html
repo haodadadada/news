@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+    <script>
+        // 执行事件步骤
+        //  点击 div 控制台输入 内容
+        //  1、获取事件源   盒子
+        let divr = document.querySelector('div');
+        //  2、绑定事件 (注册事件)
+        //  div.onclick
+        //  3、添加事件处理程序
+        divr.onclick = function()
+        {
+            console.log(('我被选中了'));
+        }
+
+    </script>
+    <!-- 常见的鼠标事件  -->
+    <!--  onclick 鼠标点击左键触发    onmouseover  鼠标经过触发    onmouseout  鼠标离开触发   onmousemove   鼠标移动触发    onmousedown  鼠标按下触发 -->
+</body>
+</html>

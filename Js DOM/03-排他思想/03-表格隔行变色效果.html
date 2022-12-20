@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: 100px auto;
+            border-collapse: collapse;  /* 取消单元格之间的空隙 */
+            text-align: center;    /* 使文本居中 */
+        }
+        thead tr {
+            background-color: skyblue;
+        }
+        tbody td {
+            border-bottom: 1px solid #d7d7d7;
+        }
+        .change {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+        <!-- table:表格整体，可用于包裹多个tr -->
+    <!-- tr：表格每行，可用于包裹td -->
+    <!-- td：表格单元格，可用于包裹内容 -->
+    <!-- caption：表格大标题， 表示表格整体大标题，默认在表格整体顶部居中显示 -->
+    <!-- th：表头单元格 表示一小列标题，通常用于表格第一行，默认内部文字加粗居中显示 -->
+    <table border="0" width="1000px" height="200px">
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>前单位净值</th>
+                <th>净值增长率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>003526</td>
+                <td>农行金穗3个月定期开券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农行金穗3个月定期开券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>            
+                <td>003526</td>
+                <td>农行金穗3个月定期开券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // 1、获取元素
+        let tr = document.querySelector('tbody').querySelectorAll('tr');
+        // 2、利用 for 循环注册事件
+        for (let i = 0; i < tr.length; i++)
+        {
+            // 鼠标经过事件
+            tr[i].onmouseover = function()
+            {
+                // this.style.backgroundColor = 'grey';
+                this.className = 'change';
+            }
+            // 鼠标离开事件
+            tr[i].onmouseout = function()
+            {
+                // for (let k = 0; k < tr.length; k++)
+                // {
+                    // tr[k].style.backgroundColor = '#fff';
+                this.className = '';
+                // }
+            }
+        }
+    </script>
+</body>
+</html>

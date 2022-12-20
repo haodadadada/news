@@ -1,0 +1,41 @@
+文档对象模型（Document Object Model, 简称DOM）,是W3C组织推荐的处理可扩展标记语言（HTML或者XML）的标准编程接口、
+W3C已经定义了一系列的DOM接口，通过这些接口可以改变网页的内容，结构和样式。
+1、对于JavaScript,为了能够使JavaScript操作HTML，JavaScript有自己的一套DOM编程接口
+2、对于HTML,DOM使得HTML形成一棵DOM树,包含文档,元素,节点
+我们获取过来的DOM元素是一个对象(object),所以称为 文档对象模型
+
+关于DOM操作,主要针对元素的操作,有创建 增 删 改 查 属性操作 事件操作
+
+一、创建
+1、document.write
+2、innerHTML
+3、createElement
+
+二、增
+1、appendChild
+2、insertBefore
+
+三、删
+1、removeChild
+
+四、改
+主要修改DOM的元素属性,元素内容,表单的值等
+1、修改元素属性:src、href、title等
+2、修改普通元素内容:innerHTML、innerText
+3、修改表单元素:value、type、disabled等
+4、修改元素样式:style、className
+
+五、查
+主要获取查询DOM元素
+1、DOM提供的API方法:getElementById、getElementsByTagName 古老用法不推荐
+2、H5新方法:querySelect、querySelectAll 提倡
+3、利用节点操作获取元素:父(parentNode)、子(children)、兄(previousElementSibling、nextElementSibling)提倡
+
+六、属性操作
+主要针对于自定义属性
+1、setAttribute:设置DOM的属性值
+2、getAttribute:得到DOM的属性值
+3、removeAttribute移除属性
+
+七、事件操作
+给元素注册事件，采取 事件源.事件类型 = 事件处理程序

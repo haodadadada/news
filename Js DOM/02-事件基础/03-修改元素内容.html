@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p {
+            width: 300px;
+            height: 100px;
+            background-color: white;
+            color: pink;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button>显示当前时间</button>
+    <div>某个时间</div>
+    <p></p>
+    <p>
+        this is a p tag
+        <span>this is a span tag</span>
+    </p>
+    <script>
+        //  innerText  从起始位置到终止位置，但它除去 html标签 ，同时 空格和换行也会去掉
+        //  innerHTML  从起始位置到终止位置，包括 html标签 ，同时保留空格和换行
+        //  当我们点击按钮，   div 里面的文字发生变化
+        //  1、获取元素
+        let btn = document.querySelector('button');
+        let divr = document.querySelector('div');
+        // 2、 注册事件
+        btn.onclick = function()
+        {
+            divr.innerHTML = getDate();
+        }
+        //  3、选择程序
+        function getDate()
+        {
+            let date = new Date();
+            
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let dates = date.getDate();
+            let arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            let day = date.getDay();
+            return '今天是:' + year + '年' + month + '月' + dates + '日' + arr[day];
+        }
+
+        //  元素也可以不添加注册事件
+        let pr = document.querySelectorAll('p');
+        pr[0].innerText = getDate();
+        console.log(pr[1].innerHTML);
+    </script>
+</body>
+</html>

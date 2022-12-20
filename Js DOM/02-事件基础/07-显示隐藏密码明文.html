@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;   /* 隐藏 input 的边框 */
+        }
+        .box img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <label> 标签为 input 元素定义标注（标记)  在 label 元素内点击文本，就会触发此控件  <label> 标签的 for 属性应当与相关元素的 id 属性相同-->
+        <!-- 提示:"for" 属性可把 label 绑定到另外一个元素。请把 "for" 属性的值设置为相关元素的 id 属性的值 -->
+        <label for="password"></label>
+        <input type="password" id="password">
+        <img src="../image/闭眼.png" alt="" id="eye">
+    </div>
+    <script>
+        //  1、获取元素
+        let imgr = document.getElementById("eye");
+        let pwd = document.getElementById('password');
+        let flag = 1;
+        //  2、注册事件
+        eye.onclick = function()
+        {
+            //  点击一次后 flag 一定要变化
+            if (flag == 1)
+            {
+                pwd.type = 'text';   // 使用 定义获取元素的变量
+                imgr.src = "../image/睁眼.png";
+                flag = 0;
+            }
+            else
+            {
+                pwd.type = 'password';
+                imgr.src = "../image/闭眼.png";
+                flag = 1;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        div {
+            height: 50px;
+            width: 160px;
+            /* margin: 0 auto; */
+            text-align: center;
+            line-height: 50px;
+            font-family: 微软雅黑;
+        }
+        img {
+            padding: 20px;
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <img src="../image/上午.jpg" alt="">
+    <script>
+        let dates = new Date('2022-12-06 4:00:00');
+        let div1 = document.querySelector('div');
+        let img1 = document.querySelector('img');
+        let hour = dates.getHours();
+        if ( hour < 12 )
+        {
+            div1.innerHTML = '早上好';
+            img1.src = "../image/上午.jpg"
+        } 
+        else if (hour < 18)
+        {
+            div1.innerHTML = '下午好';
+            img1.src = "../image/下午.jpg"
+        }
+        else 
+        {
+            div1.innerHTML = '晚上好';
+            img1.src = "../image/晚上.jpg"
+        }
+    </script>
+</body>
+</html>

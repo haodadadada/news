@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">元气森林</button>
+    <!-- script 里面的都是由 变量 来表示的 只有获取 的时候使用HTML元素及其属性值 一般都加引号 -->
+    <script>
+        //  点击一个按钮， 弹出对话框
+        //  1、事件由三部分组成  事件源   事件类型   事件处理程序 
+        //  (1) 事件源 事件被触发的对象   
+        let btn = document.getElementById('btn');
+        //  (2) 事件类型 如何触发 什么事件  例如 鼠标点击(onclick)  鼠标经过  键盘按下等
+        //  (3) 事件处理程序 通过一个 函数赋值 的方式完成
+        btn.onclick = function()
+        {
+            alert('林森气元');
+        }
+        debugger;
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>将进酒，杯莫停6</li>
+        <li>将进酒，杯莫停5</li>
+        <li>将进酒，杯莫停4</li>
+        <li>将进酒，杯莫停3</li>
+        <li>将进酒，杯莫停2</li>
+        <li>将进酒，杯莫停1</li>
+    </ul>
+    <ol id="olone">
+        <li>知否知否，应是绿肥红瘦1</li>
+        <li>知否知否，应是绿肥红瘦2</li>
+        <li>知否知否，应是绿肥红瘦3</li>
+        <li>知否知否，应是绿肥红瘦4</li>
+        <li>知否知否，应是绿肥红瘦5</li>
+
+    </ol>
+    <script>
+        // 1、返回的是 获取过来元素的集合 以 伪数组 的形式存储
+        let lis = document.getElementsByTagName('li');   // Elements 有 s
+        console.log(lis);
+        // 2、 想要依次打印里面的元素对象可以采取 遍历 的方式
+        for ( let i = 0; i < lis.length; i++)
+        {
+            console.log(lis[i]);
+        }
+
+        // 3、 返回特定的 li : element.getElementsByTagName('标签名');  父元素必须是指定的单个元素(必须指明哪个对象)，获取的时候不包括父元素自己
+        // let oler = document.getElementsByTagName('ol');  // 返回的仍然是 伪数组
+        // console.log(oler[0].getElementsByTagName('li'));
+        let oler = document.getElementById('olone');    // 通过两次获取 ，得到父元素下的子元素
+        let olertwo = oler.getElementsByTagName('li');
+        console.log(olertwo);
+        for ( let j = 0; j < olertwo.length; j++)
+        {
+            console.log(olertwo[j]);
+        }
+        console.log(typeof(olertwo));
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script>
+        //  1、获取所有元素
+        let btns = document.getElementsByTagName('button');
+        //  btns得到的是伪数组  里面的每一个元素为 btns[i]
+        for (let i = 0; i < btns.length; i++)   // 给所有按钮添加事件
+        {
+            btns[i].onclick = function()
+            {
+                    // (1)先把所有按钮的背景颜色去掉
+                for (let j = 0; j < btns.length; j++)
+                {
+                    btns[j].style.backgroundColor = '';
+                }
+                //  (2)然后才让当前的元素背景颜色为 pink，留下自己
+                this.style.backgroundColor = 'pink';
+            }
+        }
+        // 2、首先排除其他 再设置自己的样式 这种思想称为排他思想
+    </script>
+</body>
+</html>

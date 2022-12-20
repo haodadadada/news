@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- li元素 里面套 li元素 视作同一级 -->
+    <ul>
+        <li>first</li>   
+        <li></li>
+        <li></li>
+        <li>last</li>
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        // 1、子节点 childNodes  所有的子节点，包含 元素节点  文本节点等等   子节点有多个
+        let ul = document.getElementsByTagName('ul');   // 带 s 的返回都是伪数组 
+        console.log(ul[0].childNodes[1]);
+
+        // 2、 children 获取所有的子元素节点  常用
+        console.log(ul[0].children);
+
+        // 1、第一个子节点
+        console.log(ul[0].firstElementChild);
+        // 2、最后一个子节点
+        console.log(ul[0].lastElementChild);
+        // 3、伪数组形式
+        console.log(ul[0].children[0]); // 第一个
+        console.log(ul[0].children[ul[0].children.length - 1]);
+    </script>
+</body>
+</html>

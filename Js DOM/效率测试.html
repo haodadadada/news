@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    function fn()
+    {
+        let d1 = +new Date();
+        // 1、
+        // for (let i = 0; i < 1000; i++)
+        // {
+                        
+        //     let div_ = document.createElement('div');
+        //     div_.style.width = '100px';
+        //     div_.style.height = '1px';
+        //     div_.style.border = '0.5px solid black';
+
+        //     document.body.appendChild(div_);
+        // }
+
+
+        // 2、
+        let arr = [];
+        let div_ = document.querySelector('div'); 
+        for (let i = 0; i < 1000; i++)
+        {
+            // div_.innerHTML +=  '<div style="width:100px; height=1px; border:0.5px solid black;"></div>'；
+            arr.push('<div style="width:100px; height=1px; border:0.5px solid black;"></div>');
+        }
+        div_.innerHTML = arr.join('');
+        // document.body.innerHTML = arr.join('');
+
+
+        let d2 = +new Date();
+        console.log(d2 - d1);
+    }
+    fn();
+</script>
+
+</html>

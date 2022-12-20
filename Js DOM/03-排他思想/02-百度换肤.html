@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            background-image: url('../image/叶子.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pifu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 606px;
+            padding-top: 3px;
+        }
+        .pifu > li {      /* 子代选择器 */
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+        .pifu img {     /* 后代选择器 */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="pifu">
+        <li><img src="../image/森林.jpg" alt=""></li>
+        <li><img src="../image/叶子.jpg" alt=""></li>
+        <li><img src="../image/黄昏.jpg" alt=""></li>
+    </ul>
+    <script>
+        let lier = document.querySelector('.pifu').querySelectorAll('img');
+        for (let i = 0; i < lier.length; i++)
+        {
+            lier[i].onclick = function()
+            {
+                // this.src 就是点击图片的路径
+                // console.log(this.src);
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+</html>
