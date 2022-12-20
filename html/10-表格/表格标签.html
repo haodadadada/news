@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table:表格整体，可用于包裹多个tr -->
+    <!-- tr：表格每行，可用于包裹td -->
+    <!-- td：表格单元格，可用于包裹内容 -->
+    <!-- caption：表格大标题， 表示表格整体大标题，默认在表格整体顶部居中显示 -->
+    <!-- th：表头单元格 表示一小列标题，通常用于表格第一行，默认内部文字加粗居中显示 -->
+    <!-- 嵌套关系：table>tr>td -->
+    <!-- 属性名 border="数字" 边框宽度；width 数字 表格宽度；height 数字 表格高度 -->
+    <!-- 注意：caption标签写在table标签内部 -->
+    <!-- 注意：th标签写在tr标签内部，用于替换td标签 -->
+    <!-- 结构标签：thread 表格头部； tbody 表格主题 tfoot 表格底部 -->
+    <!-- 注意：表格结构标签内部用于包裹tr标签 -->
+    <!-- 注意：表格的结构标签可以省略 -->
+    <table border="1" width="500" height="300">
+        <caption><h1>个人信息</h1></caption>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>班级</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>大马猴</td>
+            <td>114514</td>
+            <td>三年级二班</td>
+            </tr>
+            <tr>
+                <td>大马猴</td>
+                <td>114514</td>
+                <td>三年级二班</td>
+                </tr>            <tr>
+                    <td>大马猴</td>
+                    <td>114514</td>
+                    <td>三年级二班</td>
+                    </tr>
+        </tbody>
+    </table>
+</body>
+</html>

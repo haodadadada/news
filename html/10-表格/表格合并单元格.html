@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 属性名：rowspan 属性值：合并单元格的个数 说明：跨行合并，将多行的单元格垂直合并 -->
+    <!-- 属性名：clospan 属性值：合并单元格的个数 说明：跨列合并，将多列的单元水平合并 -->
+    <!-- 注意：只有用一个结构标签中的单元格才能合并，不能跨结构标签合并（不能夸：thead、tbody、tfoot -->
+    <table border="1" width="500" height="300">
+        <caption><h1>动画</h1></caption>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
